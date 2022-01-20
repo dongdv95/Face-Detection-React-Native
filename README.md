@@ -1,5 +1,5 @@
 # Face-Detection-React-Native
-
+```code
 import {
   StyleSheet,
   Text,
@@ -161,3 +161,4 @@ const styles = StyleSheet.create({
     };
   },
 });
+```
