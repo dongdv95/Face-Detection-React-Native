@@ -6,7 +6,7 @@ yarn install
 yarn start
 yarn android
 
-```json
+```code
 #add faceDetection\android\app\src\main\AndroidManifest.xml
   <uses-permission android:name="android.permission.CAMERA"></uses-permission>
     /* Include this only if you are planning to use the microphone for video recording */
