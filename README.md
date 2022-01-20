@@ -162,3 +162,16 @@ const styles = StyleSheet.create({
   },
 });
 ```
+
+```json
+  <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    /* Include this only if you are planning to use the microphone for video recording */
+      <meta-data 
+      android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+      android:value="face" />
+  app : missingDimensionStrategy 'react-native-camera', 'mlkit'
+  
+  apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+ android:   classpath 'com.google.gms:google-services:4.3.3'
+      
+```
