@@ -2,9 +2,9 @@
 
 setup env
 
-yarn install
-yarn start
-yarn android
+# yarn install
+# yarn start
+# yarn android
 
 ```code
 #add faceDetection\android\app\src\main\AndroidManifest.xml
