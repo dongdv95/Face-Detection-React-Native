@@ -33,6 +33,32 @@ android {
       
 ```
 
+# For IOS
+## Add dependency towards react-native-camera in your Podfile with subspecs using one of the following:
+```code
+pod 'react-native-camera', path: '../node_modules/react-native-camera', subspecs: [
+  'FaceDetectorMLKit'
+]
+```
+## Add permissions with usage descriptions to your app Info.plist:
+```code
+<!-- Required with iOS 10 and higher -->
+<key>NSCameraUsageDescription</key>
+<string>Your message to user when the camera is accessed for the first time</string>
+
+<!-- Required with iOS 11 and higher: include this only if you are planning to use the camera roll -->
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>Your message to user when the photo library is accessed for the first time</string>
+
+<!-- Include this only if you are planning to use the camera roll -->
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Your message to user when the photo library is accessed for the first time</string>
+
+<!-- Include this only if you are planning to use the microphone for video recording -->
+<key>NSMicrophoneUsageDescription</key>
+<string>Your message to user when the microphone is accessed for the first time</string>
+```
+
 ### yarn install
 ### yarn start
 ### yarn android
