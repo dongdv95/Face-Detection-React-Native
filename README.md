@@ -1,13 +1,28 @@
 # Face-Detection-React-Native
 
-setup env
+##setup env
 
-# yarn install
-# yarn start
-# yarn android
+## Add the folowing to project level build.gradle:
+```js
+buildscript {
+  dependencies {
+  // Add this line
+  classpath 'com.google.android.gms:strict-version-matcher-plugin:1.2.1' // <--- you might want to use different version
+  }
+}
+```
+## add to the bottom of android/app/build.gradle file
+```js
+apply plugin: 'com.google.android.gms.strict-version-matcher-plugin'
 
+android {
+  defaultConfig {
+  ...
+  missingDimensionStrategy 'react-native-camera', 'mlkit'
+```
+## add faceDetection\android\app\src\main\AndroidManifest.xml
 ```code
-#add faceDetection\android\app\src\main\AndroidManifest.xml
+
   <uses-permission android:name="android.permission.CAMERA"></uses-permission>
     /* Include this only if you are planning to use the microphone for video recording */
     <application
@@ -15,14 +30,13 @@ setup env
       <meta-data 
       android:name="com.google.firebase.ml.vision.DEPENDENCIES"
       android:value="face" />
-  # add faceDetection\android\app\build.gradle   
-  android {
-  defaultConfig {
-  ...
-  missingDimensionStrategy 'react-native-camera', 'mlkit'
-  # add faceDetection\android\build.gradle
-  dependencies {
-  ...
-  classpath 'com.google.gms:google-services:4.3.3'
       
 ```
+
+### yarn install
+### yarn start
+### yarn android
+
+
+
+
