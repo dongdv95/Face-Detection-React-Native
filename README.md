@@ -40,6 +40,15 @@ pod 'react-native-camera', path: '../node_modules/react-native-camera', subspecs
   'FaceDetectorMLKit'
 ]
 ```
+## Add permission in your Podfile with subspecs using one of the following:
+```code
+target 'YourAwesomeProject' do
+
+  # …
+  
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+```
 ## Add permissions with usage descriptions to your app Info.plist:
 ```code
 <!-- Required with iOS 10 and higher -->
